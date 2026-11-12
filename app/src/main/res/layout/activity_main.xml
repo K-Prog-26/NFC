@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/modeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mode: Read a card to begin"
+        android:textStyle="italic"
+        android:paddingBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnReadMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1. Read Source" />
+
+        <Button
+            android:id="@+id/btnWriteMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2. Write to Target" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveDump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save last read as file"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/btnLoadDump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load a saved dump" />
+
+    <CheckBox
+        android:id="@+id/checkCloneUid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Also clone UID (requires a magic MIFARE Classic target card)" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/logText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textSize="12sp"
+            android:text="Tap a card against the back of your phone." />
+    </ScrollView>
+
+</LinearLayout>
